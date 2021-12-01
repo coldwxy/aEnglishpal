@@ -1,0 +1,56 @@
+<html xmlns:color="http://www.w3.org/1999/xhtml">
+<head>
+    <title>业主汽车列表</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/01.css" />
+</head>
+<body>
+<!--
+			整个页面的容器
+		-->
+<div class="wrapper">
+    <!-- 导航栏--头部 -->
+    <div class="header">
+
+        <img src="img/new_logo.png"  />
+
+        <span>|</span>
+        <span>欢迎使用车辆管理系统</span>
+
+    </div>
+    <!-- 主界面 -->
+    <br><br><br><br>
+
+    <div class="main">
+
+        <button onclick="window.location.href = ''"style="height: 25px;width: 120px;background: #88a171;
+	border-radius: 10px;text-align: center;color:white">返回用户管理界面</button>
+        <!-- 留言信息 -->
+        <!--        <c:forEach items="${u}" var="u">&lt;!&ndash; EL &ndash;&gt;-->
+        <!--           -->
+
+
+        <!-- 添加留言 -->
+        <div class="add">
+            <div class="say">新增车辆abcsdas</div>
+        </div>
+    </div>
+
+</div>
+<textarea name="content" id="selected-words" rows="10" cols="120"></textarea><br/>
+
+
+<script>
+    function getWord(){
+        var word = window.getSelection?window.getSelection():document.selection.createRange().text;
+        return word;
+    }
+    function fillinWord(){
+        var element = document.getElementById("selected-words");
+        element.value = element.value + " " + getWord();
+    }
+    document.getElementById("text-content").addEventListener("click", fillinWord, true);
+    document.getElementById("text-content").addEventListener("touchstart", fillinWord, true);
+</script>
+</body>
+</html>
